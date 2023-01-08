@@ -1,0 +1,21 @@
+.div_01 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  z-index: 0;
+  
+}
+
+.div_02 {
+  position: fixed;
+  top: 25vh;
+  height: 50vh;
+  width: 500px;
+  z-index: 1;
+  opacity: 0;
+  background-color: #555;
+}

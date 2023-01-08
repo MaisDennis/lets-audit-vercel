@@ -1,0 +1,111 @@
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.div_01_A {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 2rem;
+  // background-color: blue;
+
+
+
+  .flagIcon {
+    height: 2rem;
+    width: auto;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+}
+
+.div_01_B {
+  position: absolute;
+  right: 1vw;
+  top: 9vh;
+  z-index: 1;
+
+  border: solid 1px #eee;
+  padding: 0.4rem 1.2rem;
+  background-color: #fff;
+}
+
+.div_02_A {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  // background-color: lightsalmon;
+
+  nav {
+    // height: 5rem;
+    // background-color: blue;
+
+    a {
+      display: inline-block;
+      position: relative;
+      font-weight: bold;
+      color: var(--gray-800);
+      
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--cyan-600);
+      }
+    }
+  }
+  
+  button {
+    margin-left: 2rem;
+  }
+}
+
+.div_02_B {
+  width: 100%;
+
+  button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9rem;
+    width: 100%;
+    border-radius: 4px;
+    padding: 0.4rem 1rem;
+    margin: 0.8rem 0;
+
+    p {
+      margin-left: 0.4rem;
+    }
+
+  }
+  .facebookButton {
+    color: #fff;
+    background-color: #1773EA;
+  }
+
+  .googleButton {
+    border: solid 1px #ccc;
+  }
+}
+
+.div_03 {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  // background-color: lightcoral;
+  img {
+    max-height: 6vh;
+    width: auto;
+    border-radius: 50%;
+    border: solid 2px white;
+    
+  }
+}
