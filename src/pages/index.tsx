@@ -4,6 +4,7 @@ import { createContext, FormEvent, useEffect, useState } from 'react'
 // -----------------------------------------------------------------------------
 import styles from '../styles/Home.module.scss'
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 import { Proposal } from '../components/Proposals'
 import { ProposalByCreatedAt } from '../components/ProposalsByCreatedAt'
 // import Modal from 'react-modal';
@@ -218,6 +219,7 @@ export default function Home({
       <Header
         handleSignInFacebook={handleSignInFacebook}
         handleSignInGoogle={handleSignInGoogle}
+        noButton={false}
       />
       
       <div className={styles.div_01_A}>
@@ -383,7 +385,7 @@ export default function Home({
         </div>
       </div>
 
-      <footer className={styles.footer}>© 2023</footer>
+      <Footer></Footer>
     </SessionContext.Provider>
     
   )

@@ -11,6 +11,7 @@ import { SessionContext } from '../../pages/index';
 export function Header({ 
   handleSignInFacebook,
   handleSignInGoogle,
+  noButton,
 }) {
   const [ toggleSignIn, setToggleSignIn ] = useState(false)
 
@@ -35,34 +36,38 @@ export function Header({
       
       <div className={styles.div_01_A}>
         <img className={styles.flagIcon} src="/images/flag.jpg" alt="SomeLogo" />
-      
-        <div className={styles.div_02_A}>
-          {/* <nav>
-            <a href="">Passo-a-passo</a>
-          </nav>
-          <button>
-            <FiBell color="#17C8EB" size={28}/>
-          </button> */}
-          <div className={styles.div_03}>
-            { session ? (
-              <img src={session.user.image} alt="avatar" />
-            )
-            : (
-              <img src="/images/defaultAvatar.png" alt="avatar" />
-            )
-            
-            }
-          </div>
-          <SignInButton 
-            handleToggleSignIn={handleToggleSignIn}
-          />
-        </div>
-
+        { 
+          !noButton ? (
+            <div className={styles.div_02_A}>
+              {/* <nav>
+                <a href="">Passo-a-passo</a>
+              </nav>
+              <button>
+                <FiBell color="#17C8EB" size={28}/>
+              </button> */}
+              <div className={styles.div_03}>
+                { session ? (
+                  <img src={session.user.image} alt="avatar" />
+                )
+                : (
+                  <img src="/images/defaultAvatar.png" alt="avatar" />
+                )
+                
+                }
+              </div>
+              <SignInButton 
+                handleToggleSignIn={handleToggleSignIn}
+              />
+            </div>
+          )
+          : null
+        }
       </div>
       {
         toggleSignIn ? (
           <div className={styles.div_01_B}>
             <div className={styles.div_02_B}>
+              
               <button 
                 className={styles.facebookButton}
                 onClick={() => handleFacebookAction()}
