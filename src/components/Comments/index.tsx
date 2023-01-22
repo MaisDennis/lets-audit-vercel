@@ -31,7 +31,8 @@ export function Comments({
     handleResponseDataTotal()
   }, [])
 
-  const base_url = "http://localhost:3002"
+  // const base_url = "http://localhost:3002"
+  const base_url = "https://nodejs.vamosauditaropresidente.com"
 
   const session:any = useContext(SessionContext)
   
