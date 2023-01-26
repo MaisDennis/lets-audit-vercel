@@ -1,6 +1,6 @@
 import NextAuth from "next-auth"
 import FacebookProvider from "next-auth/providers/facebook";
-// import GithubProvider from "next-auth/providers/github"
+import GithubProvider from "next-auth/providers/github"
 import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions = {
