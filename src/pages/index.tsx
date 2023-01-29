@@ -1,5 +1,6 @@
 import { GetServerSideProps, GetStaticProps } from 'next';
 import { getSession, signIn, useSession } from 'next-auth/react'
+import Head from 'next/head';
 import { createContext, FormEvent, useEffect, useState } from 'react'
 // -----------------------------------------------------------------------------
 import styles from '../styles/Home.module.scss'
@@ -216,6 +217,9 @@ export default function Home({
   // ---------------------------------------------------------------------------
   return (  
     <SessionContext.Provider value={sessionData}>
+      <Head>
+        <title>Vamos Auditar...</title>
+      </Head>
       <Header
         handleSignInFacebook={handleSignInFacebook}
         handleSignInGoogle={handleSignInGoogle}
