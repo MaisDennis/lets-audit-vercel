@@ -234,13 +234,12 @@ export function InputComment({
   return (
     <div className={styles.div_01}>
       {/* <Modal toggleModal={toggleModal}/> */}
-      <form onSubmit={submitInput}>
-
         <div className={styles.div_02_A}>
           <img src={session.user.image} alt="avatar" />
         </div>
 
         <div className={styles.div_02_B}>
+          <form onSubmit={submitInput}>
           <input
             className={styles.commentInput}
             type="text"
@@ -390,9 +389,9 @@ export function InputComment({
               }
             </div>
           </div>
-
+          </form>
         </div>
-      </form>
+      
     </div>
   )
 }
